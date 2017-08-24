@@ -1,0 +1,43 @@
+#: init/jboss6.js
+msgid "CI Server not found"
+msgstr "Servidor CI no encontrado"
+
+#: init/jboss6.js
+msgid "Command Jboss: "
+msgstr "Comando JBoss: "
+
+#: public/form/jboss-form.js
+msgid "Server"
+msgstr "Servidor"
+
+#: public/form/jboss-form.js
+msgid "Jboss Path"
+msgstr "Ruta Jboss"
+
+#: public/form/jboss-form.js
+msgid "Functions"
+msgstr "Funciones"
+
+#: public/form/jboss-form.js
+msgid "Custom Params"
+msgstr "Parámetros personalizados"
+
+#: public/form/jboss-form.js
+msgid "Hostname"
+msgstr "Nombre del host"
+
+#: public/form/jboss-form.js
+msgid "File Path"
+msgstr "Ruta del Fichero"
+
+#: public/form/jboss-form.js
+msgid "Credentials"
+msgstr "Credenciales"
+
+#: public/form/jboss-form.js
+msgid "Username"
+msgstr "Usuario"
+
+#: public/form/jboss-form.js
+msgid "Password"
+msgstr "Contraseña"
