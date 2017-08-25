@@ -63,11 +63,13 @@
     });
 
 
-    var customParams = Cla.ui.textField({
+    var customParams = Cla.ui.arrayGrid({
         name: 'customParams',
         fieldLabel: _('Custom Params'),
-        value: data.customParams || '',
-        hidden: true
+        value: data.customParams,
+        description: _('Custom commands or arguments'),
+        hidden: true,
+        default_value: '.'
     });
 
     var hostname = Cla.ui.textField({

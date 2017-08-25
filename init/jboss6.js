@@ -12,7 +12,7 @@ reg.register('service.jboss6.server', {
         var command = '';
         var pathJboss = params.path || '';
         var arg = params.arg || '';
-        var customParams = params.customParams || '';
+        var customParams = params.customParams;
         var hostname = params.hostname || '';
         var username = params.username || '';
         var password = params.password;
@@ -27,13 +27,13 @@ reg.register('service.jboss6.server', {
         }
 
         if (arg == 'start') {
-            command = 'nohup ' + pathJboss + '/bin/run.sh ' + customParams + ' > /dev/null 2>&1 > /dev/null &';
+            command = 'nohup ' + pathJboss + '/bin/run.sh ' + customParams.join(" ") + ' > /dev/null 2>&1 > /dev/null &';
         } else if (arg == 'stop') {
             command = pathJboss + '/bin/shutdown.sh ';
             if (username && password) {
                 command = command + '-u ' + username + ' -p ' + password;
             }
-            command = command + ' ' + customParams;
+            command = command + ' ' + customParams.join(" ");;
         } else {
             command = pathJboss + '/bin/twiddle.sh ';
             if (username && password) {

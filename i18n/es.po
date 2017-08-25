@@ -23,6 +23,10 @@ msgid "Custom Params"
 msgstr "Parámetros personalizados"
 
 #: public/form/jboss-form.js
+msgid "Custom commands or arguments"
+msgstr "Párametros personalizados o argumentos"
+
+#: public/form/jboss-form.js
 msgid "Hostname"
 msgstr "Nombre del host"
 
