@@ -5,7 +5,7 @@
     var serverCombo = Cla.ui.ciCombo({
         name: 'server',
         value: data.server || '',
-        class: 'BaselinerX::CI::generic_server',
+        role: 'Server',
         fieldLabel: _('Server'),
         allowBlank: false,
         with_vars: 1
