@@ -1,4 +1,4 @@
-name: Clarive JBoss 6 Plugin
+name: JBoss 6 Plugin
 description: The JBoss 6 plugin will allow you to interact with the JBoss server performing and undoing deployments.
 version: 1.0
 icon: https://cdn.rawgit.com/clarive/cla-jboss6-plugin/master/public/icon/jboss6.svg?sanitize=true
