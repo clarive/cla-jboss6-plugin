@@ -11,6 +11,13 @@
         with_vars: 1
     });
 
+    var userTextField = Cla.ui.textField({
+        name: 'user',
+        fieldLabel: _('User'),
+        value: data.user || '',
+        allowBlank: true
+    });
+
     var pathJboss = Cla.ui.textField({
         name: 'path',
         fieldLabel: _('Jboss Path'),
@@ -134,6 +141,7 @@
         layout: 'form',
         items: [
             serverCombo,
+            userTextField,
             pathJboss,
             args,
             credentials,

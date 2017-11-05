@@ -4,6 +4,36 @@ reg.register('service.jboss6.server', {
     name: 'Jboss 6 Application Server',
     icon: '/plugin/cla-jboss6-plugin/icon/jboss6.svg',
     form: '/plugin/cla-jboss6-plugin/form/jboss-form.js',
+    rulebook: {
+        moniker: 'jboss6_task',
+        description: _('Executes a Gradle compilation'),
+        required: ['server', 'arg'],
+        allow: ['server', 'arg', 'path', 'custom_args', 'user', 'hostname', 'file', 
+        'username', 'password', 'errors'],
+        mapper: {
+            'custom_args': 'customParams',
+            'errors': 'type'
+        },
+        examples: [{
+            jboss6_task: {
+                server: 'jboss6_server',
+                user: 'clarive_user',
+                path: '/usr/share/jboss-6-Final',
+                arg: "start",
+                custom_args:["-c default", "-b 0.0.0.0"]
+            }  
+        },{
+            jboss6_task: {
+                server: 'jboss6_server',
+                user: 'clarive_user',
+                arg: "deploy",
+                username: "jboss-user",
+                password: "1232566",
+                hostname: "193.192.32.1",
+                file: "/tmp/example.war"
+            }  
+        }]
+    },
     handler: function(ctx, params) {
         var ci = require("cla/ci");
         var log = require('cla/log');
@@ -15,6 +45,7 @@ reg.register('service.jboss6.server', {
         var customParams = params.customParams;
         var hostname = params.hostname || '';
         var username = params.username || '';
+        var user = params.user || '';
         var password = params.password;
         var file = params.file || '';
         var ciServer = ci.findOne({
@@ -66,6 +97,6 @@ reg.register('service.jboss6.server', {
                 rc_warn: params.warn
             }
         });
-        return output;
+        return output.output;
     }
 });
