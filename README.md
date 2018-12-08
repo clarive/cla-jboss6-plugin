@@ -1,6 +1,6 @@
 # JBoss 6 Plugin
 
-<img src="https://cdn.rawgit.com/clarive/cla-jboss6-plugin/master/public/icon/jboss6.svg?sanitize=true" alt="JBoss 6 Plugin" title="JBoss 6 Plugin" width="120" height="120">
+<img src="https://cdn.jsdelivr.net/gh/clarive/cla-jboss6-plugin@master/public/icon/jboss6.svg?sanitize=true" alt="JBoss 6 Plugin" title="JBoss 6 Plugin" width="120" height="120">
 
 The JBoss 6 plugin will allow you to interact with the JBoss server performing and undoing deployments.
 
